@@ -11,8 +11,12 @@ import MessageBar from "../utils/messageBar/MessageBar"
 import Loading from '../utils/progressHUD/progressHUD'
 import TabBar from './TabBarContainer'
 import WebView from '../components/page/webview'
+import CustomMap from '../components/page/Map'
 
 import CodePush from 'react-native-code-push';
+import { Initializer } from "react-native-baidumap-sdk";
+
+Initializer.init("jIBwYpPowb2yEcUtZL2mgwU0IPopO2X3")
 
 let codePushOptions = {
   //设置检查更新的频率
@@ -46,6 +50,7 @@ const scenes = Actions.create(
               (state) => state.common.loading
             )(Loading)}/>
           <Scene key="webView" hideNavBar component={WebView}/>
+          <Scene key="mapView" hideNavBar component={CustomMap}/>
         </Stack>
       </Lightbox>
     </Modal>

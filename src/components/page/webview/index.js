@@ -7,7 +7,7 @@ import {commonStyle} from '../../../utils/commonStyle'
 import {BaseComponent} from '../../base/baseComponent'
 import { deviceInfo } from '../../../utils'
 export default class CustomWebView extends BaseComponent {
-
+  
   navigationBarProps() {
     return {
       title: this.props.title,

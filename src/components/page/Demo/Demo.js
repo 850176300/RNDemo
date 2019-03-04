@@ -70,7 +70,8 @@ class Demo extends BaseComponent{
     navigationBarProps() {
         return {
           title: '测试',
-          rightTitle: '网页'
+          rightTitle: '网页',
+          leftTitle:'地图'
         }
     }
 
@@ -78,6 +79,10 @@ class Demo extends BaseComponent{
         Actions.webView({uri: 'http://www.baidu.com', title: '简书'})
     }
 
+    onLeftPress(){
+        Actions.mapView()
+    }
+    
     componentDidMount(){
     }
 

@@ -1,16 +1,15 @@
-package com.rnproject;
+package com.bzyl.rndemo;
 
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import org.lovebing.reactnative.baidumap.BaiduMapPackage;
+import cn.qiuxiang.react.baidumap.BaiduMapPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 import com.brentvatne.react.ReactVideoPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.github.yamill.orientation.OrientationPackage;
 import com.microsoft.codepush.react.CodePush;
 import com.cmcewen.blurview.BlurViewPackage;
-import com.microsoft.codepush.react.CodePush;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
