@@ -1,0 +1,6 @@
+framework module react_native_fast_image {
+  umbrella header "react-native-fast-image-umbrella.h"
+
+  export *
+  module * { export * }
+}

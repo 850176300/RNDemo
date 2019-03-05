@@ -1,0 +1,6 @@
+framework module react_native_baidumap_sdk {
+  umbrella header "react-native-baidumap-sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}
