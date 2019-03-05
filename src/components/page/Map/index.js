@@ -33,6 +33,9 @@ export default class CustomMapView extends BaseComponent {
     })
     await Location.init()
     Location.addLocationListener(location => {
+      this.setState({
+        address:{longitude:location.longitude, latitude:location.latitude}
+      })
     })
     Location.start()
   }
