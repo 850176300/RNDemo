@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleSheet, View, Image, Text, Button, TouchableOpacity, Animated, Easing} from 'react-native'
+import {StyleSheet, View, Image, Text, Button, TouchableOpacity, Animated, Easing, Platform} from 'react-native'
 import {commonStyle} from '../../../utils/commonStyle'
 import {BaseComponent} from '../../base/baseComponent'
 import { deviceInfo } from '../../../utils'
@@ -78,9 +78,9 @@ export default class CustomMapView extends Component {
   async componentWillMount(){
     await Location.init()
     Location.addLocationListener(location => {
-      // this.setState({
-      //   address:{longitude:location.longitude, latitude:location.latitude}
-      // })
+      this.setState({
+        address:{longitude:location.longitude, latitude:location.latitude}
+      })
       Location.stop()
     })
     Location.start()
@@ -142,7 +142,8 @@ export default class CustomMapView extends Component {
         {
           coordinate,
           key: Math.random(),
-          size:{width:50, height:50}
+          size:{width:30, height:30},
+          centerOffset:Platform.OS === "android"?{x:0, y:0} : {x=10, y = 10}
         }
       ]
     });
