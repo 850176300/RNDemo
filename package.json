@@ -14,7 +14,7 @@
     "react": "16.6.1",
     "react-dom": "^16.8.2",
     "react-native": "0.55.4",
-    "react-native-baidumap-sdk": "^0.6.0",
+    "react-native-baidumap-sdk": "git+https://github.com/850176300/react-native-baidumap-sdk.git#release",
     "react-native-blur": "^3.2.2",
     "react-native-button": "^2.3.0",
     "react-native-code-push": "^5.5.2",

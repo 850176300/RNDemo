@@ -78,9 +78,9 @@ export default class CustomMapView extends Component {
   async componentWillMount(){
     await Location.init()
     Location.addLocationListener(location => {
-      this.setState({
-        address:{longitude:location.longitude, latitude:location.latitude}
-      })
+      // this.setState({
+      //   address:{longitude:location.longitude, latitude:location.latitude}
+      // })
       Location.stop()
     })
     Location.start()
@@ -141,7 +141,8 @@ export default class CustomMapView extends Component {
         ...this.state.markers,
         {
           coordinate,
-          key: Math.random()
+          key: Math.random(),
+          size:{width:50, height:50}
         }
       ]
     });
