@@ -143,7 +143,7 @@ export default class CustomMapView extends Component {
           coordinate,
           key: Math.random(),
           size:{width:30, height:30},
-          centerOffset:Platform.OS === "android"?{x:0, y:0} : {x=10, y = 10}
+          centerOffset:Platform.OS === "android"?{x:0, y:0} : {x:0, y:10}
         }
       ]
     });
